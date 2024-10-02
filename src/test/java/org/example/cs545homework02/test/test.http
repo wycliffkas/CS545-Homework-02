@@ -1,0 +1,44 @@
+### Add a new book
+POST localhost:8080/v1/books
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "Spring Boot in Action",
+  "isbn": "9781617294945",
+  "price": 40.99
+}
+
+###
+POST http://localhost:8080/v1/books
+Content-Type: application/json
+
+{
+  "id": 2,
+  "title": "Clean Code",
+  "isbn": "9780132350884",
+  "price": 35.00
+}
+
+### Get list of all books
+GET localhost:8080/v1/books
+Accept: application/json
+
+#### Get a single book
+GET localhost:8080/v1/books/1
+Accept: application/json
+
+
+### Update book with ID 1
+PUT http://localhost:8080/v1/books/1
+Content-Type: application/json
+
+{
+  "title": "Spring Boot in Action (Updated)",
+  "isbn": "9781617294945",
+  "price": 45.99
+}
+
+
+### Delete book with ID 2
+DELETE http://localhost:8080/v1/books/2
